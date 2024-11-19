@@ -26,3 +26,8 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 9000);
 }
+
+document.getElementById('feedback-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Terkirim');
+});

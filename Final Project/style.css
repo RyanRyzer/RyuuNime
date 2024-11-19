@@ -422,3 +422,40 @@ footer {
         height: 200px;
     }
 }
+
+@media (max-width: 768px) {
+    .slide-text-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .text-container form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .text-container input, .text-container textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-container h3 {
+        font-size: 1.2rem;
+    }
+
+    .text-container p {
+        font-size: 0.9rem;
+    }
+
+    .text-container button {
+        width: 100%;
+        padding: 10px;
+    }
+}

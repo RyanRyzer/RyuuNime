@@ -213,18 +213,30 @@
                 <div class="mySlides fade">
                     <img src="assets/images/miku.webp" alt="Hatsune Miku Project Sekai">
                 </div>
+            <div class="dots-container">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
             </div>
+        </div>
+        <div class="text-container">
+            <h3>Anime Movie Terbaik</h3>
+            <p>Terdapat beberapa daftar anime dengan movie yang cukup memuaskan sejak dulu hingga saat ini. Tentu anime movie memiliki cerita dan grafis yang lebih menarik daripada anime serialisasi. Oleh karena itu, berikut adalah beberapa daftar anime movie terbaik yang direkomendasikan oleh <span class="highlight">RyuuNime.</span> Daftar yang kami berikan ini mencakup karya legendaris, cerita menarik, bahkan hingga rilisan terbaru yang telah dikelompokkan berdasarkan studio, genre, dan popularitas. Setiap judul memberikan gambaran tentang cerita, genre, serta mengapa mereka dianggap penting dalam dunia anime.</p>
             <br>
-            <div>
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-                <span class="dot"></span> 
-            </div>
+            <p>Jika kalian tertarik untuk memasukkan movie yang kalian inginkan, kalian juga bisa memberikan kami saran untuk movie anime yang menurut kalian bagus untuk kami tunjukkan pada <span class="highlight">RyuuNime.</span></p>
+            
+            <form id="feedback-form" action="/submit-feedback" method="post" class="feedback-form">
+                <input type="text" id="name" name="name" placeholder="Nama" required>
+                <input type="email" id="email" name="email" placeholder="email" required>
+                <textarea id="feedback" name="feedback" rows="5" cols="20" placeholder="Saran..." required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
         </section>
     </main>
     <footer>

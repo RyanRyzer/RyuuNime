@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('header.navbar-container');
-    if (window.scrollY > 50) { // Atur nilai sesuai kebutuhan
+    if (window.scrollY > 50) { 
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
@@ -30,4 +30,15 @@ function showSlides() {
 document.getElementById('feedback-form').addEventListener('submit', function(event) {
     event.preventDefault();
     alert('Terkirim');
+});
+
+elements.forEach(el => observer.observe(el));
+
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('header.navbar-container');
+    if (window.scrollY > 50) { // Ganti 50 dengan nilai scroll yang diinginkan
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
 });

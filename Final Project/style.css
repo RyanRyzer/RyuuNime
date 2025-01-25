@@ -14,6 +14,17 @@ body {
     margin: 0;
 }
 
+main {
+    flex: 1;
+}
+
+body.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
 header.navbar-container {
     display: flex;
     justify-content: space-between;
@@ -73,7 +84,8 @@ header.navbar-container .search-form {
 }
 
 header.navbar-container .search-form .search-input-container {
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 header.navbar-container .search-form input[type="search"] {
@@ -83,6 +95,20 @@ header.navbar-container .search-form input[type="search"] {
     background-color: #222;
     color: #fff;
     text-align: left;
+}
+
+header.navbar-container .search-form button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+header.navbar-container .search-form button:hover {
+    background-color: #45a049;
 }
 
 .hero {
@@ -111,7 +137,7 @@ header.navbar-container .search-form input[type="search"] {
 }
 
 .anime-container {
-    max-width: 1600px;
+    max-width: 1920px;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -240,7 +266,7 @@ footer {
 }
 
 .coming img:hover {
-    width: 25%;
+    width: 17%;
 }
 
 .movie {
@@ -326,8 +352,10 @@ footer {
 
 .text-container h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
-    margin-left: -800px;
+    text-align: left;
+    padding-left: 20px;
+    margin-left: 35px;
+    max-width: 500px;
     color: rgb(110, 223, 223);
 }
 
@@ -472,6 +500,90 @@ footer {
     padding: 5px 10px;
     font-size: 12px;
     border-radius: 5px;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #45a049;
+}
+
+.pembelian-section {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pembelian-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pembelian-form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+.pembelian-form input,
+.pembelian-form textarea,
+.pembelian-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.pembelian-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pembelian-form button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 1080px) {
+    body {
+        font-size: 14px;
+    }
+
+    header.navbar-container {
+        padding: 5px 10px;
+    }
+
+    header.navbar-container .logo img {
+        height: 40px;
+    }
+
+    header.navbar-container nav {
+        flex-direction: column;
+    }
+
+    .anime-container {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .anime-item {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {

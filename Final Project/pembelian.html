@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelian</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <header class="navbar-container">
+        <div class="logo">
+            <a href="index.html"><img src="assets/images/Ryuunime.png" alt="RyuuNime"></a>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html#rekomendasi">Rekomendasi</a></li>
+                <li><a href="index.html#segera">Segera Tayang</a></li>
+                <li><a href="index.html#serial">Serial</a></li>
+                <li><a href="index.html#product">Produk</a></li>
+                <li><a href="index.html#movie">Movie</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="pembelian" class="pembelian-section">
+            <h1>Form Pembelian</h1>
+            <form action="/submit-pembelian" method="post" class="pembelian-form" onsubmit="return showThankYouMessage()">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" rows="4" required></textarea>
+
+                <label for="produk">Produk:</label>
+                <select id="produk" name="produk" required>
+                    <option value="standard">PHANTOMIME STANDARD EDITION CD</option>
+                    <option value="limited">PHANTOMIME LIMITED EDITION CD</option>
+                    <option value="rapreap">RAP REAP TOP LIMITED EDITION</option>
+                </select>
+
+                <label for="jumlah">Jumlah:</label>
+                <input type="number" id="jumlah" name="jumlah" min="1" required>
+
+                <button type="submit">Beli</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy Hak Cipta by RyanRyzer</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

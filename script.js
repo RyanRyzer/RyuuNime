@@ -1,3 +1,18 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const products = document.querySelectorAll('.product');
+    
+    products.forEach(product => {
+        const soldOut = product.querySelector('.sold-out');
+        const buyButton = product.querySelector('.buy-button');
+        
+        if (soldOut) {
+            buyButton.classList.add('disabled');
+            buyButton.setAttribute('href', '#');
+            buyButton.style.pointerEvents = 'none';
+        }
+    });
+});
+
 window.addEventListener('scroll', function() {
     const navbar = document.querySelector('header.navbar-container');
     if (window.scrollY > 50) { 
@@ -41,22 +56,6 @@ window.addEventListener('scroll', function() {
     } else {
         navbar.classList.remove('scrolled');
     }
-});
-
-document.getElementById('search-button').addEventListener('click', function(event) {
-    event.preventDefault();
-    console.log('Tombol cari diklik');
-    const searchInput = document.getElementById('search-input').value.toLowerCase();
-    console.log('Kata kunci pencarian:', searchInput);
-    const elementsToSearch = document.querySelectorAll('.anime-item');
-
-    elementsToSearch.forEach(element => {
-        if (element.textContent.toLowerCase().includes(searchInput)) {
-            element.style.display = 'block';
-        } else {
-            element.style.display = 'none';
-        }
-    });
 });
 
 function showThankYouMessage() {
